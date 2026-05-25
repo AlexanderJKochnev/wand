@@ -4,29 +4,29 @@ from wang_service import TextImageGenerator
 # '/System/Library/Fonts/Supplemental/Arial.ttf'
 font = '/System/Library/Fonts/Supplemental/Copperplate.ttc'
 generator = TextImageGenerator(
-    width=800,
+    width=300,
     height=800,
-    font_name=font,  #'Arial',
+    font_name=font,  # 'Arial',
     color_rgb=(255, 0, 0)
 )
 
 if __name__ == "__main__":
     # Вариант 1: Обычный горизонтальный текст
+    text = " Hennessy Prive "
     generator.generate(
-            text = "Hennessy Prive", template = "horizontal", output_path =
-            "/Users/kochnev/PycharmProjects/wine/wand/horizontal_text.png"
-            )
-    
+        text="Hennessy Prive", template="horizontal",
+        output_path="/Users/kochnev/PycharmProjects/wine/wand/media/main_hor.png"
+    )
+
     # Вариант 2: Текст по кругу
     generator.generate(
-            text = " Hennessy Prive ", template = "circle", output_path =
-            "/Users/kochnev/PycharmProjects/wine/wand/circle_text.png"
-            )
+        text=text, template="circle", output_path="/Users/kochnev/PycharmProjects/wine/wand/media/main_circle_text.png"
+    )
     generator.generate(
-            text = "Hennessy Prive", template = "persp",
-            output_path = "/Users/kochnev/PycharmProjects/wine/wand/persp_text.png"
-            )
+        text=text, template="persp",
+        output_path="/Users/kochnev/PycharmProjects/wine/wand/media/main_persp_text.png"
+    )
     generator.generate(
-            text = "Hennessy Prive", template = "wave",
-            output_path = "/Users/kochnev/PycharmProjects/wine/wand/wave_text.png"
-            )
+        text=text, template="wave",
+        output_path="/Users/kochnev/PycharmProjects/wine/wand/media/main_wave_text.png"
+    )
